@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { Button, Spinner, Toast } from "react-bootstrap";
+import CardGrid from "./components/CardGrid/CardGrid";
+import NavBar from "./components/NavBar/NavBar";
+import Toasts from "./components/Toasts/Toasts";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar></NavBar>
+      <Toast>Toast</Toast>
+      <button>Plain Button</button>
+      <Button variant="success">React Success</Button>
+      <Button variant="warning">React Warning</Button>
+      <Spinner animation="grow" variant="dark" />
+      <Toasts></Toasts>
+      <CardGrid></CardGrid>
     </div>
   );
 }
